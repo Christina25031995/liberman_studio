@@ -356,6 +356,8 @@
     22%,70% { opacity:1; letter-spacing:0.14em; }
     88%,100% { opacity:0; letter-spacing:0.12em; }
   }
+  .brand-logo { height:64px; }
+  @media (max-width:760px) { .brand-logo { height:52px; } }
   @keyframes introLogo {
     0% { opacity:0; transform:scale(1.06); filter:blur(6px); }
     24%,70% { opacity:1; transform:scale(1); filter:blur(0); }
@@ -473,15 +475,14 @@
 <div style="background:#0E0A0B; color:#F2EDE7; font-family:'Jost',sans-serif; overflow-x:hidden;">
 
   <div style="position:fixed; inset:0; z-index:60; background:#0B0709; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; animation:introOut 4.2s cubic-bezier(.6,0,.25,1) forwards;">
-    <div style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(46px,9vw,120px); line-height:1; color:#F2EDE7; animation:introMark 4.2s ease forwards;">líbe</div>
-    <div style="font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.42em; text-transform:uppercase; color:#F2EDE7; animation:introSub 4.2s ease forwards;">studio</div>
+    <img src="assets/libe-logo-light.svg" alt="líbe studio" style="display:block; width:clamp(120px,22vw,260px); height:auto; animation:introLogo 4.2s ease forwards;">
   </div>
 
   <input type="checkbox" id="navToggle" class="nav-toggle">
   <label for="navToggle" class="nav-scrim" aria-hidden="true"></label>
 
   <header style="position:fixed; top:0; left:0; right:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:22px 44px; background:linear-gradient(180deg, rgba(14,10,11,.65) 0%, rgba(14,10,11,0) 100%);">
-    <div style="font-family:'Cormorant Garamond',serif; font-size:26px; letter-spacing:0.06em; color:#F2EDE7;">líbe <span style="font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.34em; text-transform:uppercase; opacity:.75;">studio</span></div>
+    <a href="#" aria-label="líbe studio — на главную" style="display:block; line-height:0;"><img class="brand-logo" src="assets/libe-logo-light.svg" alt="líbe studio" style="display:block; width:auto;"></a>
     <label for="navToggle" class="nav-burger" aria-label="Меню"><span></span></label>
     <nav class="site-nav" style="display:flex; gap:30px; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#F2EDE7; white-space:nowrap;">
       <a href="#work" style="color:#F2EDE7;" sc-camel-on-click="{{ closeNav }}">Проекты</a>
@@ -735,7 +736,7 @@
 
   <footer class="pad" style="padding:44px 60px; display:flex; flex-direction:column; gap:22px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; opacity:.45; border-top:1px solid rgba(242,237,231,.1);">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-      <div style="font-family:'Cormorant Garamond',serif; font-size:22px; letter-spacing:0.06em; text-transform:none; opacity:1;">líbe studio</div>
+      <img src="assets/libe-logo-light.svg" alt="líbe studio" style="display:block; height:56px; width:auto;">
       <div>© 2026 Илона Либерман</div>
       <div>Санкт-Петербург · Москва · весь&nbsp;мир</div>
     </div>
